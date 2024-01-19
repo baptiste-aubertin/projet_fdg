@@ -81,7 +81,6 @@ class RatingGetter():
             if i != k:
                 data_path = self.config.rating_cv_path + self.config.dataset_name + "-" + str(i) + ".csv"
                 # if not os.path.exists
-                print(data_path)
                 if not os.path.isfile(data_path):
                     print("the format of ratings data is wrong!")
                     sys.exit()
