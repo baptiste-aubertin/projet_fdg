@@ -9,7 +9,7 @@ class ConfigX():
 
     def __init__(self):
         # Dataset Parameters
-        self.dataset_name = "ft"  # short name of datasets ["ft":"filmtrust","db":"douban","ca":"ciao"]
+        self.dataset_name = "ft"  # short name of datasets ["ft":"filmtrust","db":"douban","ca":"ciao", "ep":"epinions"]
         self.k_fold_num = 5  # the num of cross validation
         self.rating_path = "./RSAlgorithms/data/%s_ratings.txt" % self.dataset_name  # the raw ratings data file
         self.rating_cv_path = "./RSAlgorithms/data/cv/"  # the cross validation file of ratings data
@@ -28,6 +28,7 @@ class ConfigX():
         self.maxIter = 100  # the maximum number of iterations
         self.lambdaP = 0.001  # the parameter of user regularizer
         self.lambdaQ = 0.001  # the parameter of item regularizer
+        self.beta = 0.01
         self.gamma = 0  # momentum coefficient
         self.isEarlyStopping = False  # early stopping flag
 
