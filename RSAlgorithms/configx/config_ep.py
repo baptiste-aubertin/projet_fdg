@@ -1,5 +1,5 @@
 # encoding:utf-8
-class ConfigX():
+class ConfigEp():
     """
     docstring for ConfigX
 
