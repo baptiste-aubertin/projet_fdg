@@ -15,12 +15,13 @@ class SocialReg(MF):
     Ma H, Zhou D, Liu C, et al. Recommender systems with social regularization[C]//Proceedings of the fourth ACM international conference on Web search and data mining. ACM, 2011: 287-296.
     """
 
-    def __init__(self):
+    def __init__(self, sim="cosine"):
         super(SocialReg, self).__init__()
         # self.config.lambdaP = 0.001
         # self.config.lambdaQ = 0.001
         self.config.alpha = 0.1
         self.tg = TrustGetter()
+        self.sim = sim
         # self.init_model()
 
     def init_model(self, k):
@@ -41,7 +42,10 @@ class SocialReg(MF):
         # util.save_data(self.user_sim,'../data/sim/ft_cf_soreg08.pkl')
 
     def get_sim(self, u, k):
-        sim = (pearson_sp(self.rg.get_row(u), self.rg.get_row(k)) + 1.0) / 2.0  # fit the value into range [0.0,1.0]
+        if self.sim == "pearson":
+            sim = (pearson_sp(self.rg.get_row(u), self.rg.get_row(k)) + 1.0) / 2.0  # fit the value into range [0.0,1.0]
+        else:
+            sim = (cosine_sp(self.rg.get_row(u), self.rg.get_row(k)) + 1.0) / 2.0  # fit the value into range [0.0,1.0]
         return sim
 
     def train_model(self, k):
