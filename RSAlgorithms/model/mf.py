@@ -27,7 +27,7 @@ class MF():
         # self.init_model()
         self.iter_rmse = []
         self.iter_mae = []
-        pass
+        
 
     def init_model(self,k):
         self.read_data(k)

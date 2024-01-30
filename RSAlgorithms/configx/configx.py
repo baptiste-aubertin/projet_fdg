@@ -9,14 +9,14 @@ class ConfigX():
 
     def __init__(self):
         # Dataset Parameters
-        self.dataset_name = "ep10"  # short name of datasets ["ft":"filmtrust","db":"douban","ca":"ciao", "ep":"epinions","dls":"douban_lastfm_small","dls":"delicious"]
+        self.dataset_name = "dls"  # short name of datasets ["ft":"filmtrust","db":"douban","ca":"ciao", "ep":"epinions",","dls":"delicious"]
         self.k_fold_num = 5  # the num of cross validation
         self.rating_path = "./RSAlgorithms/data/%s_ratings.txt" % self.dataset_name  # the raw ratings data file
         self.rating_cv_path = "./RSAlgorithms/data/cv/"  # the cross validation file of ratings data
         self.trust_path = './RSAlgorithms/data/%s_trust.txt' % self.dataset_name  # the raw trust data file
         self.sep = ' '  # the separator of rating and trust data in triple tuple
         self.random_state = 0  # the seed of random number
-        self.size = 0.8  # the ratio of train set
+        self.size = 0.90  # the ratio of train set
         self.min_val = 0.5  # the minimum rating value
         self.max_val = 4.0  # the maximum rating value
 
