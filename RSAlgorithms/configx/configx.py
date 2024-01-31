@@ -9,7 +9,7 @@ class ConfigX():
 
     def __init__(self):
         # Dataset Parameters
-        self.dataset_name = "dls"  # short name of datasets ["ft":"filmtrust","db":"douban","ca":"ciao", "ep":"epinions",","dls":"delicious"]
+        self.dataset_name = "ep10"  # short name of datasets ["ft":"filmtrust","db":"douban","ca":"ciao", "ep":"epinions",","dls":"delicious"]
         self.k_fold_num = 5  # the num of cross validation
         self.rating_path = "./RSAlgorithms/data/%s_ratings.txt" % self.dataset_name  # the raw ratings data file
         self.rating_cv_path = "./RSAlgorithms/data/cv/"  # the cross validation file of ratings data
