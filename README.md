@@ -1,3 +1,32 @@
+## RSAlgorithms/model/social_reg_improved.py
+
+Contient notre modèle soc reg avec la sélection de la similarité via le paramètre `sim`
+
+
+## import_\{epinion, délicous\}.ipynb
+
+Contient l'import des datasets depuis les sources originales :
+ - Delicious : https://files.grouplens.org/datasets/hetrec2011/hetrec2011-delicious-2k.zip
+ - Epinion : https://www.cse.msu.edu/~tangjili/datasetcode/epinions.zip
+
+Ils doivent être placé dans le répertoire `./datas/`pour pouvoir être correctement importés
+
+## experiments.ipynb
+
+Notebook d'analyse des données des datasets
+
+## experiments_roc_reg.ipynb
+
+Notebook d'entrainement de notre modèle avec les différentes mesures de similarités
+
+
+
+## Notes:
+
+Pour installer la librairie : `pip install -r requirements.txt`
+
+
+
 # Recommender System Suits： An open source toolkit for recommender system
 
 This repository provides a set of classical **traditional recommendation methods** which make predictions only using rating data and **social recommendation methods** which utilize trust/social information in order to alleviate the sparsity of ratings data. Besides, we have collected some classical methods implemented by others for your convenience.
